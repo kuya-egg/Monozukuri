@@ -1,0 +1,8 @@
+interface:
+  display_name: "Poka-yoke — Prevent Mistakes"
+  short_description: "Prevent mistakes with tests and boundaries"
+  brand_color: "#1F2937"
+  default_prompt: "Use $poka-yoke to make this behavior safer through explicit invariants, boundary checks, and meaningful tests."
+
+policy:
+  allow_implicit_invocation: false

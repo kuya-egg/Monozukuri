@@ -1,0 +1,8 @@
+interface:
+  display_name: "Jidoka — Stop the Line"
+  short_description: "Debug defects to root cause"
+  brand_color: "#1F2937"
+  default_prompt: "Use $jidoka to reproduce this failure, find its contributing cause, and add durable regression protection."
+
+policy:
+  allow_implicit_invocation: false

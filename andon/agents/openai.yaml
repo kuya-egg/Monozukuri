@@ -1,0 +1,8 @@
+interface:
+  display_name: "Andon — Visible System Health"
+  short_description: "Make failures and health visible"
+  brand_color: "#1F2937"
+  default_prompt: "Use $andon to design observability that makes this system's health, failures, and recovery actionable."
+
+policy:
+  allow_implicit_invocation: false

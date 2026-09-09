@@ -1,0 +1,8 @@
+interface:
+  display_name: "Monozukuri — Software Craftsmanship"
+  short_description: "Inspect reality, change small, prove it, leave the code maintainable"
+  brand_color: "#1F2937"
+  default_prompt: "Use $monozukuri-core: inspect the real system first, make the smallest change that solves this, verify it with evidence, and leave notes on what you checked and what risk remains."
+
+policy:
+  allow_implicit_invocation: true

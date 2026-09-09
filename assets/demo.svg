@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 252" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+  <rect x="1" y="1" width="858" height="250" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <path d="M1 11 a10 10 0 0 1 10 -10 h838 a10 10 0 0 1 10 10 v24 h-858 z" fill="#161b22"/>
+  <circle cx="22" cy="18" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="18" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="18" r="6" fill="#27c93f"/>
+  <text x="430" y="23" text-anchor="middle" fill="#8b949e">monozukuri</text>
+
+  <g transform="translate(24,66)">
+    <text fill="#c9d1d9" xml:space="preserve"><tspan fill="#7ee787">$</tspan> npx skills add kuya-egg/Monozukuri --skill '*'</text>
+    <text y="34" fill="#c9d1d9" xml:space="preserve"><tspan fill="#58a6ff">&#9671;</tspan>  Found 12 skills</text>
+    <text y="60" fill="#c9d1d9" xml:space="preserve"><tspan fill="#58a6ff">&#9671;</tspan>  Installed 12 skills</text>
+    <text y="88"  fill="#8b949e">   monozukuri-core  nemawashi  genchi-genbutsu  kanso  kata</text>
+    <text y="110" fill="#8b949e">   jidoka  poka-yoke  kodawari  andon  kaizen  hansei  shukka</text>
+    <text y="150" fill="#c9d1d9" xml:space="preserve"><tspan fill="#3fb950">&#10003;</tspan>  Inspect reality &#183; change small &#183; prove it &#183; leave it maintainable</text>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Hansei — Reflect and Learn"
+  short_description: "Turn failures into durable improvements"
+  brand_color: "#1F2937"
+  default_prompt: "Use $hansei to turn this failure or completed task into concrete tests, guardrails, documentation, or process improvements."
+
+policy:
+  allow_implicit_invocation: false

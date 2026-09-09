@@ -1,0 +1,8 @@
+interface:
+  display_name: "Kata — Focused Implementation"
+  short_description: "Build focused slices with proof"
+  brand_color: "#1F2937"
+  default_prompt: "Use $kata to implement this behavior in small, integrated slices with clear verification evidence."
+
+policy:
+  allow_implicit_invocation: false

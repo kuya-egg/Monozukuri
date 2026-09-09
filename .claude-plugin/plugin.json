@@ -1,0 +1,22 @@
+{
+  "name": "monozukuri",
+  "description": "Japanese-inspired software craftsmanship: inspect reality, simplify deliberately, change small, prevent defects, verify with evidence, leave the system maintainable. Umbrella skill plus 11 focused skills.",
+  "version": "0.1.0",
+  "author": {
+    "name": "kuya-egg",
+    "url": "https://github.com/kuya-egg"
+  },
+  "homepage": "https://github.com/kuya-egg/Monozukuri",
+  "repository": "https://github.com/kuya-egg/Monozukuri",
+  "license": "MIT",
+  "keywords": [
+    "craftsmanship",
+    "code-review",
+    "refactoring",
+    "testing",
+    "debugging",
+    "kaizen",
+    "software-quality"
+  ],
+  "skills": ["."]
+}

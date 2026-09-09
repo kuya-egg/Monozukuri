@@ -1,0 +1,8 @@
+interface:
+  display_name: "Kanso — Deliberate Simplicity"
+  short_description: "Choose simple designs that stay maintainable"
+  brand_color: "#1F2937"
+  default_prompt: "Use $kanso to simplify this design, reject speculative complexity, and choose the smallest complete solution."
+
+policy:
+  allow_implicit_invocation: false

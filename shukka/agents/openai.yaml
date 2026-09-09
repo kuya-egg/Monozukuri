@@ -1,0 +1,8 @@
+interface:
+  display_name: "Shukka — Responsible Release"
+  short_description: "Release changes with recovery discipline"
+  brand_color: "#1F2937"
+  default_prompt: "Use $shukka to prepare this change for release with compatibility, observability, rollback, and ownership evidence."
+
+policy:
+  allow_implicit_invocation: false

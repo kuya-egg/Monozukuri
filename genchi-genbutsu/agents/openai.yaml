@@ -1,0 +1,8 @@
+interface:
+  display_name: "Genchi Genbutsu — Inspect Reality"
+  short_description: "Inspect real code, context, and evidence"
+  brand_color: "#1F2937"
+  default_prompt: "Use $genchi-genbutsu to inspect the real repository, environment, and evidence before making this change."
+
+policy:
+  allow_implicit_invocation: false

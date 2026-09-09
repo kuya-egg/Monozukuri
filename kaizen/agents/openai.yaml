@@ -1,0 +1,8 @@
+interface:
+  display_name: "Kaizen — Continuous Improvement"
+  short_description: "Improve code safely in small steps"
+  brand_color: "#1F2937"
+  default_prompt: "Use $kaizen to improve this codebase incrementally without unnecessary rewrites or scope expansion."
+
+policy:
+  allow_implicit_invocation: false

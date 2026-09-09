@@ -1,0 +1,8 @@
+interface:
+  display_name: "Kodawari — Quality Review"
+  short_description: "Review details that protect quality"
+  brand_color: "#1F2937"
+  default_prompt: "Use $kodawari to review this change for correctness, maintainability, security, and operational quality."
+
+policy:
+  allow_implicit_invocation: false

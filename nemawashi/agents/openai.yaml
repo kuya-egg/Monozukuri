@@ -1,0 +1,8 @@
+interface:
+  display_name: "Nemawashi — Clarify Before Changing"
+  short_description: "Clarify requirements before consequential changes"
+  brand_color: "#1F2937"
+  default_prompt: "Use $nemawashi to clarify this software idea, its constraints, and its success criteria before implementation."
+
+policy:
+  allow_implicit_invocation: false
