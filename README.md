@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/monozukuri-banner.png" alt="A Japanese workshop table with engineering plans and subtle circuit traces, representing software craftsmanship" width="100%" />
+</p>
+
 # monozukuri
 
 `monozukuri` is a complete family of Agent Skills for building and maintaining
