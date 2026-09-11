@@ -26,8 +26,8 @@ Do not create repository files â€” ledgers, notes, reports, scratch documents â€
 unless requested. Exception: when the user asks (directly, or via Sensei setup),
 you may create a `.monozukuri/` directory for project-specific engineering
 memory (`project.md`, `architecture.md`, `decisions/`, `specifications/`,
-`verification/`, `state/`, `incidents/`, `reflections/`). Do not create it
-unprompted.
+`verification/`, `state/`, `blueprint/`, `incidents/`, `reflections/`). Do not
+create it unprompted.
 
 ## Stop conditions
 

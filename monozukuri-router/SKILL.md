@@ -30,8 +30,9 @@ header, and hands off to the composed sequence.
    Incident or "production is down" language forces `execute`. Detail in
    `monozukuri-core/references/sensei.md`.
 2. **Classify the task.** Pick one type: `feature`, `bugfix`, `refactor`,
-   `incident`, `migration`, `release`, `investigation`, `docs`. Set context
-   flags: `security`, `performance`, `production`, `data`, `auth`.
+   `incident`, `migration`, `release`, `investigation`, `docs`, `greenfield`
+   (a new project, or a new standalone subsystem, built from scratch). Set
+   context flags: `security`, `performance`, `production`, `data`, `auth`.
 3. **Assess risk.** Tier `low|medium|high|critical` per
    `monozukuri-core/references/constitution.md`. When signals disagree, take
    the higher tier.
@@ -42,7 +43,9 @@ header, and hands off to the composed sequence.
 5. **Compose.** Look up the playbook in
    `monozukuri-core/references/playbooks.md`; apply the `security` /
    `performance` modifiers matching the context flags; scale verification
-   depth by risk tier.
+   depth by risk tier. For `greenfield`, the sequence begins `nemawashi →
+   monozukuri-blueprint`; the four blueprint stages are gated on user
+   approval, and phases execute one at a time after stage 4.
 6. **Emit the plan header** (see Output).
 
 ## Output
@@ -70,6 +73,16 @@ Monozukuri sequence:
   → shukka (+security verification) → hansei
 DoD: 11 items (feature + security, high) — see monozukuri-core/references/definition-of-done.md
 Change budget: declare expected file scope before CHANGE (see change-budget.md)
+```
+
+```text
+Task: build a new invoicing service from scratch
+Mode: execute
+Context: greenfield      Risk: high → architecture-approval gate
+Monozukuri sequence:
+  nemawashi → monozukuri-blueprint (4 gated stages)
+  → per phase: kanso → kata → poka-yoke → kodawari → andon → shukka → hansei
+DoD: 8 items (greenfield, high) — see monozukuri-core/references/definition-of-done.md
 ```
 
 ## Handoff

@@ -149,6 +149,11 @@ Monozukuri is five layers. Each has one job and one home:
 
 ## Greenfield construction
 
+For a new project or subsystem, the router selects the `greenfield` playbook,
+which runs `monozukuri-blueprint` — four approval-gated stages (business
+logic, tech stack, logic-to-stack map, phase plan) — before the loop below;
+each phase then follows these steps.
+
 When building from scratch:
 
 1. Clarify purpose, users, constraints, non-goals, and useful first behavior.
@@ -232,7 +237,7 @@ section of `references/evidence-and-completion.md`.
 Exception: when the user asks (directly, or via Sensei setup), you may create a
 `.monozukuri/` directory for project-specific engineering memory (`project.md`,
 `architecture.md`, `decisions/`, `specifications/`, `verification/`, `state/`,
-`incidents/`, `reflections/`). Do not create it unprompted.
+`blueprint/`, `incidents/`, `reflections/`). Do not create it unprompted.
 
 Adjacent Kaizen is allowed only when it is directly related, low risk,
 independently verifiable, smaller than the primary change, and unlikely to

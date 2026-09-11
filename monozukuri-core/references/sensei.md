@@ -75,6 +75,7 @@ engineering memory:
 - `specifications/` — per-feature specs.
 - `verification/` — evidence ledgers and verification reports.
 - `state/` — resumable task state for long-running work.
+- `blueprint/` — greenfield build blueprints (business logic, stack, map, phases).
 
 Do not create `.monozukuri/` unprompted; it exists only when the user asks.
 
