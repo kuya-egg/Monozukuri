@@ -113,15 +113,15 @@ Monozukuri is five layers. Each has one job and one home:
 | --- | --- | --- |
 | Constitution | `references/constitution.md` | Non-negotiable principles and risk tiers |
 | Router | `monozukuri-router/SKILL.md` | Classify the task, assess risk, choose execute or sensei mode, compose the playbook and Definition of Done |
-| Playbooks | `references/playbooks.md` | Ordered compositions of the twelve skills plus modifiers |
-| Skills | the twelve skill directories | The actual engineering practice |
-| References | `references/` | Supporting detail: evidence, change budget, keep-why, sensei, orchestration, task-state, evaluation, evolution, schema, templates |
+| Playbooks | `references/playbooks.md` | Ordered compositions of the eleven focused skills plus modifiers |
+| Skills | the eleven focused skill directories | The actual engineering practice |
+| References | `references/` | Supporting detail: evidence, change budget, keep-why, sensei, orchestration, task-state, evaluation, evolution, schema, and `references/templates/` |
 
 ```text
                      MONOZUKURI
               engineering philosophy
              ┌──────────┴──────────┐
-        12 skills               Core rules
+    11 focused skills           Core rules
        (primitives)             (references/)
              │            constitution, playbooks, DoD,
    nemawashi · genchi ·    evidence, change-budget, keep-why,
@@ -140,7 +140,7 @@ Monozukuri is five layers. Each has one job and one home:
          PLAYBOOK                 │
              └──────────┬─────────┘
                         ↓
-              12 Monozukuri skills
+           11 focused Monozukuri skills
                         ↓
                verify + evidence
                         ↓
@@ -245,4 +245,5 @@ Ledger template, Kaizen boundary, and the full completion standard:
 `references/definition-of-done.md`. Turning recurring failures into durable
 rules: `references/evolution.md`. Scoring a change against the constitution:
 `references/evaluation.md`. Shapes for `.monozukuri/` files:
-`references/schema.md`.
+`references/schema.md`. Fill-in forms for ADRs, specifications, verification
+notes, incidents, and reflections: `references/templates/`.
