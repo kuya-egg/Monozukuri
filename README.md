@@ -33,6 +33,7 @@ The repository also contains focused, independently installable skills:
 
 | Skill | Focus |
 | --- | --- |
+| `monozukuri-router` | Classify the task, assess risk, compose the skill sequence and Definition of Done |
 | `nemawashi` | Clarify intent and prepare the design |
 | `genchi-genbutsu` | Inspect the real repository and environment |
 | `kanso` | Choose simple, durable designs |
@@ -44,6 +45,51 @@ The repository also contains focused, independently installable skills:
 | `kaizen` | Improve code incrementally |
 | `hansei` | Learn from failures and completed work |
 | `shukka` | Release, migrate, and hand off responsibly |
+
+The suite is `monozukuri-core` (the umbrella), `monozukuri-router`, and the 11
+focused skills above—13 skills in total.
+
+### Router and interaction modes
+
+`monozukuri-router` is step 0 of any consequential task. Before engineering
+work starts, it classifies the task, assesses its risk tier, chooses the
+interaction mode, and emits a plan header naming the Monozukuri sequence and
+the Definition of Done. It does no engineering work itself; it hands off to
+the composed sequence. Skip it for trivial one-line edits, pure questions, and
+throwaway scripts.
+
+Two interaction modes:
+
+- `execute` (default) — apply the methodology and do the work. Incident or
+  "production is down" language forces this mode.
+- `sensei` — chosen when the user asks to be **guided**, **taught**,
+  **reviewed** (a review of their own approach), or **set up** (Monozukuri
+  configured for a project). The methodology is unchanged; only how the agent
+  talks to the user changes.
+
+### Reference material
+
+The methodology is documented under `monozukuri-core/references/`:
+
+| File | Contents |
+| --- | --- |
+| `constitution.md` | Non-negotiable principles the skills implement |
+| `playbooks.md` | Default skill compositions per task type, plus modifiers |
+| `definition-of-done.md` | Per-task DoD templates derived from each playbook |
+| `change-budget.md` | Declaring expected file scope before editing |
+| `keep-why.md` | Preserving intent, rejected alternatives, and trade-offs |
+| `sensei.md` | The sensei interaction mode: guide, teach, review, set up |
+| `orchestration.md` | Roles and coordination guidance for multi-agent hosts |
+| `task-state.md` | Small resumable state record for long, multi-session work |
+| `evaluation.md` | Measuring whether the methodology actually helps |
+| `evolution.md` | Applying Hansei and Kaizen to the methodology itself |
+| `schema.md` | The `monozukuri/v1` machine-readable YAML block format |
+| `templates/` | Fill-in templates: `adr`, `specification`, `verification`, `incident`, `reflection` |
+
+### Compatibility
+
+Existing skill names and paths are a stable public API. Monozukuri 2.0 is
+additive: one new skill (`monozukuri-router`) and new reference material only.
 
 ## What it changes
 
@@ -81,6 +127,12 @@ npx skills add kuya-egg/Monozukuri --skill nemawashi
 npx skills add kuya-egg/Monozukuri --skill kodawari
 ```
 
+The task router on its own:
+
+```bash
+npx skills add kuya-egg/Monozukuri --skill monozukuri-router
+```
+
 The focused skills can also be used as a sequence. A typical greenfield path
 is `nemawashi` → `genchi-genbutsu` → `kanso` → `kata` → `poka-yoke` →
 `kodawari` → `andon` → `shukka`, followed by `hansei` and `kaizen` as the
@@ -99,7 +151,7 @@ The repository is also a self-contained plugin marketplace. From Claude Code:
 /plugin install monozukuri@monozukuri
 ```
 
-This installs all 12 skills at once, namespaced under the `monozukuri` plugin.
+This installs all 13 skills at once, namespaced under the `monozukuri` plugin.
 `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` define it;
 `claude plugin validate .` passes.
 
@@ -113,8 +165,9 @@ failure handling, and AI-generated complexity.
 ## Name
 
 The suite is `monozukuri`—the Japanese idea of craftsmanship and the art of
-making things. Its umbrella skill is `monozukuri-core`; the other eleven carry
-their own vocabulary names (`kaizen`, `jidoka`, `poka-yoke`, …).
+making things. Its umbrella skill is `monozukuri-core` and its task router is
+`monozukuri-router`; the eleven focused skills carry their own vocabulary
+names (`kaizen`, `jidoka`, `poka-yoke`, …).
 
 ## Sources and inspiration
 
