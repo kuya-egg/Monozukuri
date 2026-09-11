@@ -127,6 +127,23 @@ name: docs
 sequence: [genchi-genbutsu, kanso, kodawari]
 ```
 
+### greenfield
+
+Use when building a new project or a substantial new subsystem from scratch.
+`nemawashi` frames intent; `monozukuri-blueprint` produces four gated artifacts
+— business logic, tech stack, a logic-to-stack map, and a phase plan; then each
+phase from that plan runs its own playbook in order. The `kanso … kaizen` tail
+is the shape of a single phase, not one pass over the whole build. Stop if
+stage 1 cannot be written without inventing product decisions the user has not
+made.
+
+```yaml
+schema: monozukuri/v1
+type: playbook
+name: greenfield
+sequence: [nemawashi, monozukuri-blueprint, kanso, kata, poka-yoke, kodawari, andon, shukka, hansei, kaizen]
+```
+
 ## Modifiers
 
 ### security

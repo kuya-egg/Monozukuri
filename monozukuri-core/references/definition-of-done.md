@@ -124,6 +124,21 @@ checklist:
   - { id: links,      text: "Links resolve to the right targets",               gate: prove,    min_risk: low }
 ```
 
+```yaml
+schema: monozukuri/v1
+type: dod-template
+playbook: greenfield
+checklist:
+  - { id: intent,     text: "nemawashi output exists: purpose, users, constraints, success criteria", gate: discover, min_risk: low }
+  - { id: logic,      text: "Business-logic artifact approved by the user",                    gate: discover, min_risk: low }
+  - { id: stack,      text: "Tech-stack artifact approved; significant choices recorded as ADRs", gate: discover, min_risk: medium }
+  - { id: mapping,    text: "Logic-to-stack map approved with no unmapped elements and no orphans", gate: discover, min_risk: medium }
+  - { id: phases,     text: "Phase plan approved; every phase names a playbook and a risk tier", gate: discover, min_risk: low }
+  - { id: slice,      text: "Phase 1 is a vertical slice through real boundaries",             gate: discover, min_risk: medium }
+  - { id: per_phase,  text: "Each completed phase passed its own playbook's Definition of Done", gate: prove,    min_risk: low }
+  - { id: evidence,   text: "Evidence ledger spans the phases built in this effort",           gate: prove,    min_risk: low }
+```
+
 ## Modifier additions
 
 When a modifier is active, its items are appended to the rendered
