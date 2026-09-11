@@ -105,6 +105,48 @@ success.
 - **Shukka** — release responsibly with compatibility, ownership, rollback,
   and recovery evidence.
 
+## Layer architecture
+
+Monozukuri is five layers. Each has one job and one home:
+
+| Layer | Where it lives | Responsibility |
+| --- | --- | --- |
+| Constitution | `references/constitution.md` | Non-negotiable principles and risk tiers |
+| Router | `monozukuri-router/SKILL.md` | Classify the task, assess risk, choose execute or sensei mode, compose the playbook and Definition of Done |
+| Playbooks | `references/playbooks.md` | Ordered compositions of the twelve skills plus modifiers |
+| Skills | the twelve skill directories | The actual engineering practice |
+| References | `references/` | Supporting detail: evidence, change budget, keep-why, sensei, orchestration, task-state, evaluation, evolution, schema, templates |
+
+```text
+                     MONOZUKURI
+              engineering philosophy
+             ┌──────────┴──────────┐
+        12 skills               Core rules
+       (primitives)             (references/)
+             │            constitution, playbooks, DoD,
+   nemawashi · genchi ·    evidence, change-budget, keep-why,
+   kanso · kata · jidoka   sensei, orchestration, task-state,
+   poka-yoke · kodawari    evaluation, evolution, schema
+   andon · shukka
+   hansei → kaizen
+             └──────────┬──────────┘
+                        ↓
+                ROUTER (step 0)
+             ┌──────────┴──────────┐
+             ↓                     ↓
+          EXECUTE                SENSEI
+      classify + risk       guide / teach /
+             ↓              review / setup
+         PLAYBOOK                 │
+             └──────────┬─────────┘
+                        ↓
+              12 Monozukuri skills
+                        ↓
+               verify + evidence
+                        ↓
+            reflection → improvement
+```
+
 ## Greenfield construction
 
 When building from scratch:
@@ -123,6 +165,12 @@ Do not build a framework, platform, plugin system, or generalized architecture
 before a real requirement proves it is needed.
 
 ## Focused skills and safe routing
+
+For any consequential task, begin with the `monozukuri-router` skill: it
+classifies the task, assesses risk, chooses execute or sensei mode, and composes
+the skill sequence and Definition of Done. When `monozukuri-router` is
+unavailable, apply its procedure inline from `references/` (`constitution.md`,
+`playbooks.md`, `definition-of-done.md`).
 
 Use a focused skill when one concern dominates the task:
 
@@ -165,7 +213,12 @@ for human input when requirements or architecture are ambiguous, a new
 authorization is needed, or a destructive action is involved. Do not keep
 editing merely to reach a green-looking result.
 
-Full do-not list and stop-condition detail: `references/guardrails.md`.
+Full do-not list and stop-condition detail: `references/guardrails.md`. The
+non-negotiable principles and risk tiers behind these guardrails are in
+`references/constitution.md`; how skills compose into an ordered response is in
+`references/playbooks.md`. For multi-agent or worktree work see
+`references/orchestration.md` and `references/task-state.md`; for guide, teach,
+review, and setup modes see `references/sensei.md`.
 
 ## Evidence and completion
 
@@ -173,11 +226,23 @@ Maintain a compact evidence ledger (Observed / Decided / Changed / Verified /
 Residual risk) in working notes or the final report; do not create a repository
 file unless requested. Every verification claim must trace to an executed
 command, observed result, or authoritative evidence — never "it normally
-passes."
+passes." Distinguish `IMPLEMENTED` from `VERIFIED`: see the "Prove it works"
+section of `references/evidence-and-completion.md`.
+
+Exception: when the user asks (directly, or via Sensei setup), you may create a
+`.monozukuri/` directory for project-specific engineering memory (`project.md`,
+`architecture.md`, `decisions/`, `specifications/`, `verification/`, `state/`).
+Do not create it unprompted.
 
 Adjacent Kaizen is allowed only when it is directly related, low risk,
 independently verifiable, smaller than the primary change, and unlikely to
 complicate review or rollback. Otherwise record a concrete follow-up.
 
 Ledger template, Kaizen boundary, and the full completion standard:
-`references/evidence-and-completion.md`.
+`references/evidence-and-completion.md`. Scope discipline and diff-size limits:
+`references/change-budget.md`. Preserve the rationale behind existing code:
+`references/keep-why.md`. The exit criteria the router composes:
+`references/definition-of-done.md`. Turning recurring failures into durable
+rules: `references/evolution.md`. Scoring a change against the constitution:
+`references/evaluation.md`. Shapes for `.monozukuri/` files:
+`references/schema.md`.

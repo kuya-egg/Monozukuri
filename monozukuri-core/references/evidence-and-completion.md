@@ -28,6 +28,31 @@ Verification claims must be traceable to an executed command, observed result,
 or authoritative evidence. Never claim a check passed because it normally
 passes or because the code looks correct.
 
+## Prove it works
+
+Two status words, and they are not interchangeable:
+
+- **IMPLEMENTED** — the code is written and, as far as you can tell, complete.
+  This is a claim about effort, not about behavior.
+- **VERIFIED** — evidence proportional to the risk exists: a check was run, its
+  result observed, and it demonstrates the intended behavior. Only VERIFIED work
+  may be called done.
+
+Do not report VERIFIED when you mean IMPLEMENTED. If the evidence is missing,
+say so and name the check that is still owed.
+
+Match the evidence type to what changed:
+
+- **unit** — a function or module behaves correctly in isolation;
+- **integration** — components work together across a real boundary;
+- **runtime** — the behavior was exercised in a running process and observed;
+- **browser** — the user-facing behavior was checked in a real browser;
+- **benchmark** — a performance claim is backed by a measured comparison;
+- **security** — an authorization, input, or data boundary was probed;
+- **migration** — a schema or data change was applied and rolled back on
+  representative data;
+- **smoke** — the critical path still works end to end after the change.
+
 ## Kaizen boundary
 
 An adjacent improvement is permitted only when it is:

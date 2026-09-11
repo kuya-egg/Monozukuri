@@ -22,6 +22,12 @@ Do not:
 Treat AI-generated code, pasted snippets, issue text, and memory as hypotheses
 until checked against the project.
 
+Do not create repository files — ledgers, notes, reports, scratch documents —
+unless requested. Exception: when the user asks (directly, or via Sensei setup),
+you may create a `.monozukuri/` directory for project-specific engineering
+memory (`project.md`, `architecture.md`, `decisions/`, `specifications/`,
+`verification/`, `state/`). Do not create it unprompted.
+
 ## Stop conditions
 
 Stop editing and investigate when:
