@@ -35,14 +35,15 @@ header, and hands off to the composed sequence.
 3. **Assess risk.** Tier `low|medium|high|critical` per
    `monozukuri-core/references/constitution.md`. When signals disagree, take
    the higher tier.
-4. **Compose.** Look up the playbook in
+4. **Low-risk fast-path.** If the tier is `low` and no modifier applies
+   (documentation work is nearly always this): emit
+   `fast-path: apply genchi-genbutsu + kanso + kodawari inline` and stop. Never
+   inflate a small task.
+5. **Compose.** Look up the playbook in
    `monozukuri-core/references/playbooks.md`; apply the `security` /
    `performance` modifiers matching the context flags; scale verification
    depth by risk tier.
-5. **Emit the plan header** (see Output).
-6. **Low-risk fast-path.** If type is `docs` or tier is `low` and no modifier
-   applies: emit `fast-path: apply kanso + kodawari inline` and stop. Never
-   inflate a small task.
+6. **Emit the plan header** (see Output).
 
 ## Output
 
@@ -67,7 +68,7 @@ Monozukuri sequence:
   → poka-yoke (+security test cases) → kata
   → kodawari (+security review) → andon (+security observability)
   → shukka (+security verification) → hansei
-DoD: 12 items (feature + security, high) — see monozukuri-core/references/definition-of-done.md
+DoD: 11 items (feature + security, high) — see monozukuri-core/references/definition-of-done.md
 Change budget: declare expected file scope before CHANGE (see change-budget.md)
 ```
 

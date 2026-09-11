@@ -1,8 +1,9 @@
 # Monozukuri playbooks
 
-A playbook is a *default* composition of the 12 skills for a task type. The
-router adapts it to the task in front of it; it is not a rigid pipeline. A
-skill can be skipped, repeated, or reordered when the work calls for it.
+A playbook is a *default* composition of the eleven focused skills for a task
+type. The router adapts it to the task in front of it; it is not a rigid
+pipeline. A skill can be skipped, repeated, or reordered when the work calls
+for it.
 Modifiers layer extra steps and definition-of-done items onto any playbook.
 
 ## How to read a playbook
@@ -13,6 +14,8 @@ later entries depend on, so moving a skill earlier usually means doing less of
 it. `kaizen` appears last where it appears at all, and runs only within the
 adjacent-improvement boundary defined in `evidence-and-completion.md` — anything
 larger is recorded as a follow-up, not done inline.
+
+## Playbooks
 
 ### feature
 
@@ -124,12 +127,11 @@ name: docs
 sequence: [genchi-genbutsu, kanso, kodawari]
 ```
 
-## security
+## Modifiers
 
-Layers threat modeling and security verification onto the base playbook. Each
-modifier is *also* a standalone playbook target — when the whole task is
-"harden auth" the router uses `security` as the base and folds in a `feature` or
-`bugfix` sequence as needed.
+### security
+
+Layers threat modeling and security verification onto the base playbook.
 
 ```yaml
 schema: monozukuri/v1
@@ -143,12 +145,9 @@ inject:
   shukka: [security verification]
 ```
 
-## performance
+### performance
 
-Layers measurement and regression guarding onto the base playbook. Like
-`security`, it doubles as a standalone target: when the task is "make the report
-page fast" the router uses `performance` as the base and folds in the sequence
-that fits the change.
+Layers measurement and regression guarding onto the base playbook.
 
 ```yaml
 schema: monozukuri/v1

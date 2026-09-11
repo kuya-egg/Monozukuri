@@ -231,8 +231,8 @@ section of `references/evidence-and-completion.md`.
 
 Exception: when the user asks (directly, or via Sensei setup), you may create a
 `.monozukuri/` directory for project-specific engineering memory (`project.md`,
-`architecture.md`, `decisions/`, `specifications/`, `verification/`, `state/`).
-Do not create it unprompted.
+`architecture.md`, `decisions/`, `specifications/`, `verification/`, `state/`,
+`incidents/`, `reflections/`). Do not create it unprompted.
 
 Adjacent Kaizen is allowed only when it is directly related, low risk,
 independently verifiable, smaller than the primary change, and unlikely to
@@ -244,6 +244,6 @@ Ledger template, Kaizen boundary, and the full completion standard:
 `references/keep-why.md`. The exit criteria the router composes:
 `references/definition-of-done.md`. Turning recurring failures into durable
 rules: `references/evolution.md`. Scoring a change against the constitution:
-`references/evaluation.md`. Shapes for `.monozukuri/` files:
+`references/evaluation.md`. The `monozukuri/v1` block format:
 `references/schema.md`. Fill-in forms for ADRs, specifications, verification
 notes, incidents, and reflections: `references/templates/`.

@@ -1,6 +1,7 @@
 # Incident writeup template
 
-Copy the block below to `.monozukuri/incidents/YYYY-MM-DD-title.md` and fill it in.
+Copy the block below to `.monozukuri/incidents/YYYY-MM-DD-title.md` and fill it
+in.
 
 ```markdown
 # Incident: <title>

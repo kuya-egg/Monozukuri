@@ -1,6 +1,7 @@
 # Specification template
 
-Copy the block below to `.monozukuri/specs/NNNN-title.md` and fill it in.
+Copy the block below to `.monozukuri/specifications/NNNN-title.md` and fill it
+in.
 
 ```markdown
 # Spec NNNN: <title>

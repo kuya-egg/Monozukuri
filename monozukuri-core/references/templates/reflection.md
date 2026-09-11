@@ -1,7 +1,7 @@
 # Reflection template
 
-Copy the block below to `.monozukuri/reflections/YYYY-MM-DD-title.md` and fill it
-in. This is a hansei: honest review, not self-justification.
+Copy the block below to `.monozukuri/reflections/YYYY-MM-DD-title.md` and fill
+it in. This is a hansei: honest review, not self-justification.
 
 ```markdown
 # Reflection: <title>

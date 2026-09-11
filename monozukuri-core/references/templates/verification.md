@@ -1,7 +1,8 @@
 # Verification report template
 
-Copy the block below into your final report or `.monozukuri/verification/NNNN-title.md`.
-It mirrors the evidence ledger in `evidence-and-completion.md`.
+Copy the block below into your final report or
+`.monozukuri/verification/NNNN-title.md`. It mirrors the evidence ledger in
+`evidence-and-completion.md`.
 
 ```markdown
 # Verification: <title>

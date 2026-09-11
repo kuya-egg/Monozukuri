@@ -1,7 +1,7 @@
 # Monozukuri constitution
 
-These principles are non-negotiable. The twelve skills implement them, the
-router sequences the skills that apply, and the definition of done enforces
+These principles are non-negotiable. The eleven focused skills implement them,
+the router sequences the skills that apply, and the definition of done enforces
 that the required ones were honored. A task may adjust how a principle is met;
 it may not opt out of one.
 

@@ -19,9 +19,9 @@ phases:
   genchi-genbutsu: complete
   kanso: complete
   kata: in_progress
-  poka-yoke: pending
-  kodawari: pending
-  shukka: pending
+  poka-yoke: not_started
+  kodawari: not_started
+  shukka: not_started
 evidence: .monozukuri/verification/<task>.md
 ```
 

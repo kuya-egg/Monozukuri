@@ -39,11 +39,11 @@ An ordered route through the suite for a class of work.
 | Field      | Type            | Notes |
 |------------|-----------------|-------|
 | `name`     | string          | unique across all playbook blocks |
-| `sequence` | list of strings | each entry is one of the 12 skill names |
+| `sequence` | list of strings | each entry is one of the eleven focused skill names |
 
 ```yaml
-name: feature
-sequence: [nemawashi, genchi-genbutsu, kanso, kata, jidoka, kodawari, shukka]
+name: example-task
+sequence: [genchi-genbutsu, kata, kodawari]
 ```
 
 ### modifier
@@ -56,7 +56,7 @@ A named overlay that injects extra steps into a playbook without redefining it.
 | `inject` | map    | keys are skill names or `after_<skill>`; values are lists of injected step labels |
 
 ```yaml
-name: security-sensitive
+name: example-overlay
 inject:
   poka-yoke: ["threat-model the change surface"]
   after_jidoka: ["run dependency and secret scans"]
@@ -75,7 +75,7 @@ A definition-of-done checklist bound to one playbook.
 `medium`, `high`, `critical`; the item applies only at that tier or higher.
 
 ```yaml
-playbook: feature
+playbook: example-task
 checklist:
   - { id: repro,   text: "Behavior reproduced against real code", gate: discover, min_risk: low }
   - { id: arch-ok, text: "Architecture approach approved",        gate: change,   min_risk: high }
