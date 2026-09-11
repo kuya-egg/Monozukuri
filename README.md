@@ -34,6 +34,7 @@ The repository also contains focused, independently installable skills:
 | Skill | Focus |
 | --- | --- |
 | `monozukuri-router` | Classify the task, assess risk, compose the skill sequence and Definition of Done |
+| `monozukuri-blueprint` | Author a greenfield build blueprint in four gated stages |
 | `nemawashi` | Clarify intent and prepare the design |
 | `genchi-genbutsu` | Inspect the real repository and environment |
 | `kanso` | Choose simple, durable designs |
@@ -46,8 +47,8 @@ The repository also contains focused, independently installable skills:
 | `hansei` | Learn from failures and completed work |
 | `shukka` | Release, migrate, and hand off responsibly |
 
-The suite is `monozukuri-core` (the umbrella), `monozukuri-router`, and the 11
-focused skills above—13 skills in total.
+The suite is `monozukuri-core` (the umbrella), `monozukuri-router`,
+`monozukuri-blueprint`, and the 11 focused skills above—14 skills in total.
 
 ### Router and interaction modes
 
@@ -66,6 +67,27 @@ Two interaction modes:
   **reviewed** (a review of their own approach), or **set up** (Monozukuri
   configured for a project). The methodology is unchanged; only how the agent
   talks to the user changes.
+
+### Greenfield blueprint
+
+`monozukuri-blueprint` turns a framed idea into a build plan before any
+implementation starts. It runs the `greenfield` playbook and produces four
+artifacts in order, each gated on explicit user approval before the next
+stage begins:
+
+1. **Business logic** — domains, actors, entities, rules, flows, and
+   invariants, in plain language, with no technology choices.
+2. **Tech stack** — language, framework, datastores, infra, and key
+   libraries, each justified by a stage-1 need.
+3. **Logic-to-stack map** — every stage-1 element mapped to exactly one home
+   in the stack, with orphans called out explicitly.
+4. **Phase plan** — ordered phases, each naming its `playbook`, `risk` tier,
+   affected areas, and prerequisites; phase 1 is a vertical slice.
+
+The artifacts live under `.monozukuri/blueprint/`. Once the phase plan is
+approved, each phase is executed under the playbook and risk tier it already
+names—the router's classify step is already answered, so implementation goes
+straight to that playbook's Definition of Done.
 
 ### Reference material
 
@@ -133,6 +155,12 @@ The task router on its own:
 npx skills add kuya-egg/Monozukuri --skill monozukuri-router
 ```
 
+The greenfield blueprint skill on its own:
+
+```bash
+npx skills add kuya-egg/Monozukuri --skill monozukuri-blueprint
+```
+
 The focused skills can also be used as a sequence. A typical greenfield path
 is `nemawashi` → `genchi-genbutsu` → `kanso` → `kata` → `poka-yoke` →
 `kodawari` → `andon` → `shukka`, followed by `hansei` and `kaizen` as the
@@ -151,7 +179,7 @@ The repository is also a self-contained plugin marketplace. From Claude Code:
 /plugin install monozukuri@monozukuri
 ```
 
-This installs all 13 skills at once, namespaced under the `monozukuri` plugin.
+This installs all 14 skills at once, namespaced under the `monozukuri` plugin.
 `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` define it;
 `claude plugin validate .` passes.
 
