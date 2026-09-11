@@ -13,7 +13,7 @@ phase 1 must be a vertical slice through real boundaries.
 - intent: <one line — the outcome this phase delivers>
 - affected: <areas / files>
 - prereqs: <phase ids + external dependencies, or "none">
-- playbook: <feature|bugfix|refactor|migration|release|greenfield-subsystem>
+- playbook: <feature|refactor|migration|release>
 - risk: <low|medium|high|critical>
 
 ## Phase 2: <name>
@@ -21,7 +21,7 @@ phase 1 must be a vertical slice through real boundaries.
 - intent: <one line>
 - affected: <areas / files>
 - prereqs: <phase ids + external>
-- playbook: <feature|bugfix|refactor|migration|release|greenfield-subsystem>
+- playbook: <feature|refactor|migration|release>
 - risk: <low|medium|high|critical>
 
 ## Phase order rationale

@@ -97,8 +97,7 @@ Per phase, record:
 - `affected` — the areas or files it touches;
 - `prereqs` — earlier phase ids and named external dependencies, or
   "none";
-- `playbook` — `feature | bugfix | refactor | migration | release |
-  greenfield-subsystem`;
+- `playbook` — `feature | refactor | migration | release`;
 - `risk` — `low | medium | high | critical`.
 
 Validate that every `prereqs` entry is either an earlier phase id or a
