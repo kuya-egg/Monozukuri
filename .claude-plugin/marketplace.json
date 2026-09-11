@@ -10,7 +10,7 @@
       "name": "monozukuri",
       "source": ".",
       "description": "Japanese-inspired software craftsmanship: inspect reality, simplify deliberately, change small, prevent defects, verify with evidence, leave the system maintainable. An umbrella skill, a task router (monozukuri-router), a greenfield blueprint skill (monozukuri-blueprint), and 11 focused skills (nemawashi, genchi-genbutsu, kanso, kata, jidoka, poka-yoke, kodawari, andon, kaizen, hansei, shukka).",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "license": "MIT",
       "homepage": "https://github.com/kuya-egg/Monozukuri",
       "keywords": ["craftsmanship", "code-review", "refactoring", "testing", "debugging", "kaizen"]

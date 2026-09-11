@@ -1,6 +1,6 @@
 ---
 name: monozukuri-core
-description: "Umbrella skill of the monozukuri suite. Guide consequential software work as durable craftsmanship: inspect reality, simplify deliberately, make small safe changes, prevent defects, verify with evidence, and leave the system maintainable. Use for features, refactors, debugging, reviews, migrations, tests, and releases in greenfield or existing code. Skip for trivial one-line edits, pure questions, and throwaway scripts."
+description: "Umbrella workflow for consequential software work: inspect reality, route the task and risk, simplify deliberately, make small safe changes, prevent defects, verify with evidence, and leave software maintainable. Use for greenfield builds, features, refactors, debugging, reviews, migrations, tests, and releases. Skip trivial edits and throwaway scripts."
 ---
 
 # Monozukuri

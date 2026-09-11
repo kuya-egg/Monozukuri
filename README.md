@@ -17,6 +17,8 @@ It is designed for both greenfield construction and existing codebases. The
 target is maintainable software—not theoretically perfect software: code that
 future maintainers can understand, verify, operate, and change safely.
 
+[View `monozukuri-core` on skills.sh](https://www.skills.sh/kuya-egg/monozukuri/monozukuri-core)
+
 The skill is deliberately **Japanese-inspired, not Japanese-prescriptive**.
 It does not claim that developers in one country share a single engineering
 style. The useful ideas are treated as metaphors for disciplined software work.

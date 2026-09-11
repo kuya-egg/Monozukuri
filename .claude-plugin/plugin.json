@@ -1,7 +1,7 @@
 {
   "name": "monozukuri",
   "description": "Japanese-inspired software craftsmanship: inspect reality, simplify deliberately, change small, prevent defects, verify with evidence, leave the system maintainable. An umbrella skill, a task router (monozukuri-router), a greenfield blueprint skill (monozukuri-blueprint), and 11 focused skills.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": {
     "name": "kuya-egg",
     "url": "https://github.com/kuya-egg"
