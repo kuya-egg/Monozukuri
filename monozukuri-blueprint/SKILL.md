@@ -86,7 +86,7 @@ Four approved artifacts in `.monozukuri/blueprint/`, and a phase plan whose
 phases each name a `playbook` (`feature | refactor | migration | release`)
 and a `risk` tier (`low | medium | high | critical`).
 
-## Hand-off
+## Handoff
 
 After stage 4 approval, start phase 1. Its `playbook` and `risk` are already
 set, so the router's classify step is already answered: go straight to that

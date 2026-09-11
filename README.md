@@ -106,7 +106,8 @@ The methodology is documented under `monozukuri-core/references/`:
 | `evaluation.md` | Measuring whether the methodology actually helps |
 | `evolution.md` | Applying Hansei and Kaizen to the methodology itself |
 | `schema.md` | The `monozukuri/v1` machine-readable YAML block format |
-| `templates/` | Fill-in templates: `adr`, `specification`, `verification`, `incident`, `reflection` |
+| `blueprint.md` | The four-stage greenfield blueprint gate protocol |
+| `templates/` | Fill-in templates: `adr`, `specification`, `verification`, `incident`, `reflection`, and `blueprint/` |
 
 ### Compatibility
 

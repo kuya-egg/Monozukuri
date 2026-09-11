@@ -113,8 +113,8 @@ Monozukuri is five layers. Each has one job and one home:
 | --- | --- | --- |
 | Constitution | `references/constitution.md` | Non-negotiable principles and risk tiers |
 | Router | `monozukuri-router/SKILL.md` | Classify the task, assess risk, choose execute or sensei mode, compose the playbook and Definition of Done |
-| Playbooks | `references/playbooks.md` | Ordered compositions of the eleven focused skills plus modifiers |
-| Skills | the eleven focused skill directories | The actual engineering practice |
+| Playbooks | `references/playbooks.md` | Ordered compositions of the eleven focused skills plus modifiers; `greenfield` composes `monozukuri-blueprint` before phase work |
+| Skills | the eleven focused skill directories | The actual engineering practice, including `monozukuri-blueprint` for greenfield planning |
 | References | `references/` | Supporting detail: evidence, change budget, keep-why, sensei, orchestration, task-state, evaluation, evolution, schema, and `references/templates/` |
 
 ```text
@@ -221,7 +221,9 @@ editing merely to reach a green-looking result.
 Full do-not list and stop-condition detail: `references/guardrails.md`. The
 non-negotiable principles and risk tiers behind these guardrails are in
 `references/constitution.md`; how skills compose into an ordered response is in
-`references/playbooks.md`. For multi-agent or worktree work see
+`references/playbooks.md` (including the greenfield composition with
+`monozukuri-blueprint`). For the blueprint gate protocol see
+`references/blueprint.md`. For multi-agent or worktree work see
 `references/orchestration.md` and `references/task-state.md`; for guide, teach,
 review, and setup modes see `references/sensei.md`.
 
