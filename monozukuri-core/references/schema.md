@@ -39,7 +39,11 @@ An ordered route through the suite for a class of work.
 | Field      | Type            | Notes |
 |------------|-----------------|-------|
 | `name`     | string          | unique across all playbook blocks |
-| `sequence` | list of strings | each entry is one of the eleven focused skill names |
+| `sequence` | list of strings | each entry is one of the eleven focused skill names, or `monozukuri-blueprint` |
+
+`monozukuri-blueprint` is admitted here because it is a first-class step in the
+`greenfield` sequence — a discoverable skill the router runs in order, not a
+practice hidden in prose. No other non-focused skill may appear in a `sequence`.
 
 ```yaml
 name: example-task
