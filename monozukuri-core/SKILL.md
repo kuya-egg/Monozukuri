@@ -223,9 +223,10 @@ non-negotiable principles and risk tiers behind these guardrails are in
 `references/constitution.md`; how skills compose into an ordered response is in
 `references/playbooks.md` (including the greenfield composition with
 `monozukuri-blueprint`). For the blueprint gate protocol see
-`references/blueprint.md`. For multi-agent or worktree work see
-`references/orchestration.md` and `references/task-state.md`; for guide, teach,
-review, and setup modes see `references/sensei.md`.
+`references/blueprint.md`. For roles, when to delegate to a fresh subagent, the
+dispatch contract, and the review gate see `references/orchestration.md`; for
+resuming multi-session or worktree work see `references/task-state.md`; for
+guide, teach, review, and setup modes see `references/sensei.md`.
 
 ## Evidence and completion
 

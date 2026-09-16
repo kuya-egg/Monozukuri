@@ -46,7 +46,13 @@ header, and hands off to the composed sequence.
    depth by risk tier. For `greenfield`, the sequence begins `nemawashi →
    monozukuri-blueprint`; the four blueprint stages are gated on user
    approval, and phases execute one at a time after stage 4.
-6. **Emit the plan header** (see Output).
+6. **Decide execution mode per step.** Default every step to inline. Mark a
+   step for delegation only when it matches a row in the inline-vs-delegated
+   table in `monozukuri-core/references/orchestration.md` — an independent
+   investigation, an independently verifiable implementation step, parallel
+   disjoint work, or independent review on high/critical risk. Never delegate
+   integration or the final call.
+7. **Emit the plan header** (see Output).
 
 ## Output
 
@@ -55,10 +61,13 @@ Task: <one line>
 Mode: <execute|sensei>
 Context: <type> [+security] [+performance]      Risk: <tier> → <human gate>
 Monozukuri sequence:
-  <skill> → <skill> → [<injected step>] → <skill> ...
+  <skill> → <skill> → [<injected step>] → <skill [subagent: role]> ...
 DoD: <n> items (<playbook> [+modifiers], <tier>) — see monozukuri-core/references/definition-of-done.md
 Change budget: declare expected file scope before CHANGE (see change-budget.md)
 ```
+
+`[subagent: role]` marks a step delegated per
+`monozukuri-core/references/orchestration.md`; an unmarked step runs inline.
 
 Worked example:
 
@@ -68,8 +77,8 @@ Mode: execute
 Context: feature +security      Risk: high → architecture-approval gate
 Monozukuri sequence:
   nemawashi → genchi-genbutsu → kanso → [threat-model]
-  → poka-yoke (+security test cases) → kata
-  → kodawari (+security review) → andon (+security observability)
+  → poka-yoke (+security test cases) → kata [subagent: implementer]
+  → kodawari (+security review) [subagent: reviewer] → andon (+security observability)
   → shukka (+security verification) → hansei
 DoD: 11 items (feature + security, high) — see monozukuri-core/references/definition-of-done.md
 Change budget: declare expected file scope before CHANGE (see change-budget.md)
