@@ -52,7 +52,11 @@ header, and hands off to the composed sequence.
    investigation, an independently verifiable implementation step, parallel
    disjoint work, or independent review on high/critical risk. Never delegate
    integration or the final call.
-7. **Emit the plan header** (see Output).
+7. **Plan checkpoints.** When the work splits into more than one unit, size
+   each unit and order them smallest first within dependency order, each
+   ending at a verified checkpoint, per
+   `monozukuri-core/references/checkpoints.md`. Skip for single-unit work.
+8. **Emit the plan header** (see Output).
 
 ## Output
 
@@ -64,6 +68,7 @@ Monozukuri sequence:
   <skill> → <skill> → [<injected step>] → <skill [subagent: role]> ...
 DoD: <n> items (<playbook> [+modifiers], <tier>) — see monozukuri-core/references/definition-of-done.md
 Change budget: declare expected file scope before CHANGE (see change-budget.md)
+Checkpoints: <n> units, smallest first (multi-unit work only — see checkpoints.md)
 ```
 
 `[subagent: role]` marks a step delegated per

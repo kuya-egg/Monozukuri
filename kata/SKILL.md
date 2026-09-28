@@ -39,6 +39,8 @@ Produce a focused, integrated change that:
 
 State the behavior, boundary, exit criterion, and files likely to change. Pick
 the smallest vertical path that proves the design through real interfaces.
+When several slices are queued, take the smallest ready one first and end each
+at a verified checkpoint (`monozukuri-core/references/checkpoints.md`).
 
 ### 2. Read before editing
 

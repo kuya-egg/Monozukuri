@@ -115,7 +115,7 @@ Monozukuri is five layers. Each has one job and one home:
 | Router | `monozukuri-router/SKILL.md` | Classify the task, assess risk, choose execute or sensei mode, compose the playbook and Definition of Done |
 | Playbooks | `references/playbooks.md` | Ordered compositions of the eleven focused skills plus modifiers; `greenfield` composes `monozukuri-blueprint` before phase work |
 | Skills | the eleven focused skill directories | The actual engineering practice, including `monozukuri-blueprint` for greenfield planning |
-| References | `references/` | Supporting detail: evidence, change budget, keep-why, sensei, orchestration, task-state, evaluation, evolution, schema, and `references/templates/` |
+| References | `references/` | Supporting detail: evidence, change budget, checkpoints, keep-why, sensei, orchestration, task-state, evaluation, evolution, schema, and `references/templates/` |
 
 ```text
                      MONOZUKURI
@@ -126,7 +126,7 @@ Monozukuri is five layers. Each has one job and one home:
              │            constitution, playbooks, DoD,
    nemawashi · genchi ·    evidence, change-budget, keep-why,
    kanso · kata · jidoka   sensei, orchestration, task-state,
-   poka-yoke · kodawari    evaluation, evolution, schema
+   poka-yoke · kodawari    checkpoints, evaluation, evolution, schema
    andon · shukka
    hansei → kaizen
              └──────────┬──────────┘
@@ -248,7 +248,9 @@ complicate review or rollback. Otherwise record a concrete follow-up.
 
 Ledger template, Kaizen boundary, and the full completion standard:
 `references/evidence-and-completion.md`. Scope discipline and diff-size limits:
-`references/change-budget.md`. Preserve the rationale behind existing code:
+`references/change-budget.md`. Ordering multi-unit work smallest first, each
+unit ending at a verified checkpoint: `references/checkpoints.md`. Preserve the
+rationale behind existing code:
 `references/keep-why.md`. The exit criteria the router composes:
 `references/definition-of-done.md`. Turning recurring failures into durable
 rules: `references/evolution.md`. Scoring a change against the constitution:

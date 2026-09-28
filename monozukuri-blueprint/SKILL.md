@@ -75,7 +75,8 @@ the data model — also become ADRs under `.monozukuri/decisions/`.
 - contains: ordered phases, each with `intent` (one line), `affected`
   (areas or files), `prereqs` (earlier phase ids and named external
   dependencies, or "none"), `playbook`, and `risk`. Phase 1 is a vertical
-  slice through real boundaries.
+  slice through real boundaries; later phases run smallest first within
+  prereq order (`monozukuri-core/references/checkpoints.md`).
 - refuses: step-by-step task lists; a phase whose prereqs are not satisfiable
   by earlier phases.
 - template: `monozukuri-core/references/templates/blueprint/phase-plan.md`

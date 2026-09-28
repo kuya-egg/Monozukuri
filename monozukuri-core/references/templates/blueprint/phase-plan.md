@@ -3,7 +3,8 @@
 Copy the block below into `.monozukuri/blueprint/04-phase-plan.md` and fill it in.
 
 `playbook` and `risk` are read by `definition-of-done.md` when the phase starts;
-phase 1 must be a vertical slice through real boundaries.
+phase 1 must be a vertical slice through real boundaries; later phases run
+smallest first within prereq order (see `checkpoints.md`).
 
 ```markdown
 # Phase plan — <project>
@@ -25,5 +26,5 @@ phase 1 must be a vertical slice through real boundaries.
 - risk: <low|medium|high|critical>
 
 ## Phase order rationale
-<why this sequence: what each phase unblocks, where risk is front-loaded>
+<why this sequence: what each phase unblocks, why small phases come before large ones, where a small probe retires a big unknown early>
 ```

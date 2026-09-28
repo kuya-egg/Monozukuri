@@ -101,6 +101,7 @@ The methodology is documented under `monozukuri-core/references/`:
 | `playbooks.md` | Default skill compositions per task type, plus modifiers |
 | `definition-of-done.md` | Per-task DoD templates derived from each playbook |
 | `change-budget.md` | Declaring expected file scope before editing |
+| `checkpoints.md` | Ordering multi-unit work smallest first, each unit ending at a verified checkpoint |
 | `keep-why.md` | Preserving intent, rejected alternatives, and trade-offs |
 | `sensei.md` | The sensei interaction mode: guide, teach, review, set up |
 | `orchestration.md` | Roles and coordination guidance for multi-agent hosts |

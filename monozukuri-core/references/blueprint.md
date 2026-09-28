@@ -106,6 +106,11 @@ named external dependency — never a forward reference, never vague.
 Phase 1 is a vertical slice: it cuts through every layer of the stack on
 one thin path, proving the boundaries work before breadth is added.
 
+Order the remaining phases smallest first within `prereqs` order, per
+`checkpoints.md`: small, reversible phases land before large or
+hard-to-reverse ones. A large unknown is retired early by a small probe,
+not by scheduling the large phase first.
+
 ## Executing the plan
 
 Phases run one at a time. When a phase starts, its `playbook` and `risk`
