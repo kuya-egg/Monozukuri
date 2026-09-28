@@ -1,6 +1,6 @@
 ---
 name: monozukuri-core
-description: "Umbrella workflow for consequential software work: inspect reality, route the task and risk, simplify deliberately, make small safe changes, prevent defects, verify with evidence, and leave software maintainable. Use for greenfield builds, features, refactors, debugging, reviews, migrations, tests, and releases. Skip trivial edits and throwaway scripts."
+description: "The one Monozukuri command: routes the task, runs the greenfield blueprint when needed, drives the focused skills smallest-first through checkpoints, and delegates to the host's native subagents where it pays off — inspect reality, change small, verify with evidence, leave software maintainable. Use for greenfield builds, features, refactors, debugging, reviews, migrations, tests, and releases. Skip trivial edits and throwaway scripts."
 ---
 
 # Monozukuri
@@ -14,6 +14,35 @@ It is not a claim that all Japanese engineers work the same way. These terms
 are practical metaphors, translated into behaviors. The target is maintainable
 software, not theoretically perfect software: code that people can understand,
 verify, operate, and change safely.
+
+## One entry point
+
+This skill is the only one the user needs to invoke. When it runs, it drives
+the whole suite itself — the user never has to call the router, the
+blueprint, or a focused skill by name.
+
+1. **Route.** Run `monozukuri-router` (invoke it if installed, otherwise apply
+   its procedure inline from `references/`). It fixes mode, task type, risk,
+   the skill sequence, execution mode per step, checkpoints, and the
+   Definition of Done. For a low-risk task it returns the fast-path; take it
+   and stop inflating.
+2. **Blueprint if greenfield.** When the router classifies the task as
+   `greenfield`, run `monozukuri-blueprint` next and honor its approval gates.
+3. **Execute the sequence.** Work the checkpoints smallest first
+   (`references/checkpoints.md`). For each step, invoke the named focused
+   skill through the host's skill mechanism, or apply its lens inline if it is
+   not installed.
+4. **Delegate through the native harness.** Steps the router marked
+   `[subagent: role]` go to the host's own subagent tool, briefed with the
+   dispatch contract and gated by the review loop in
+   `references/orchestration.md`. Never hand-roll an agent runner; if the host
+   has no subagent tool, work the role inline.
+5. **Prove and close.** Integrate, verify against the Definition of Done,
+   report the evidence ledger, then run `hansei` / bounded `kaizen`.
+
+The other skills stay installable and callable on their own for anyone who
+wants one practice in isolation; through this skill they are steps, not
+separate commands.
 
 ## Four commitments
 
@@ -171,13 +200,14 @@ before a real requirement proves it is needed.
 
 ## Focused skills and safe routing
 
-For any consequential task, begin with the `monozukuri-router` skill: it
-classifies the task, assesses risk, chooses execute or sensei mode, and composes
-the skill sequence and Definition of Done. When `monozukuri-router` is
-unavailable, apply its procedure inline from `references/` (`constitution.md`,
-`playbooks.md`, `definition-of-done.md`).
+Step 1 of the entry point runs `monozukuri-router`: it classifies the task,
+assesses risk, chooses execute or sensei mode, and composes the skill sequence
+and Definition of Done. When `monozukuri-router` is unavailable, apply its
+procedure inline from `references/` (`constitution.md`, `playbooks.md`,
+`definition-of-done.md`).
 
-Use a focused skill when one concern dominates the task:
+The router's sequence reaches for these focused skills; the table is the
+quick map when one concern dominates:
 
 | Situation | Skill | Follow-up |
 | --- | --- | --- |

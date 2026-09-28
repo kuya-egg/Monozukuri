@@ -52,6 +52,16 @@ The repository also contains focused, independently installable skills:
 The suite is `monozukuri-core` (the umbrella), `monozukuri-router`,
 `monozukuri-blueprint`, and the 11 focused skills above—14 skills in total.
 
+### One command
+
+You only invoke `monozukuri-core` (`/monozukuri-core` in Claude Code,
+`$monozukuri-core` in Codex). It runs the router, runs the blueprint for
+greenfield work, drives the focused skills smallest-first through
+checkpoints, and hands suitable steps to the host's native subagents (the
+`Agent` tool in Claude Code). The router and blueprint are hidden from the
+Claude Code slash menu (`user-invocable: false`) because the core runs them
+for you; the focused skills stay callable on their own.
+
 ### Router and interaction modes
 
 `monozukuri-router` is step 0 of any consequential task. Before engineering
@@ -188,6 +198,10 @@ This installs all 14 skills at once, namespaced under the `monozukuri` plugin.
 `claude plugin validate .` passes.
 
 ## Use explicitly
+
+```text
+/monozukuri-core add rate limiting to the public API
+```
 
 ```text
 Use $monozukuri-core to review this change for correctness, maintainability,

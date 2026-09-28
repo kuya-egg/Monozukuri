@@ -1,0 +1,8 @@
+interface:
+  display_name: "Monozukuri Router — Step 0"
+  short_description: "Classify, assess risk, compose the skill sequence"
+  brand_color: "#1F2937"
+  default_prompt: "Use $monozukuri-router to classify this task, assess its risk, and compose the Monozukuri sequence and Definition of Done."
+
+policy:
+  allow_implicit_invocation: false

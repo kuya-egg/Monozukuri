@@ -24,6 +24,17 @@ delegation, integration, and every user-facing decision. Delegated work fills
 the other roles; the primary agent never hands off integration or the final
 call.
 
+## Using the host's native subagents
+
+Delegate through the harness's own subagent tool — never a hand-rolled runner,
+never a shell loop that launches agent CLIs.
+
+| Host | Mechanism |
+| --- | --- |
+| Claude Code | The `Agent` tool. Explorer briefs use `subagent_type: Explore` (read-only); implementer, tester, reviewer, and security briefs use a general-purpose agent. Parallel streams get `isolation: worktree`, and independent dispatches go out in a single message so they run concurrently. |
+| Other hosts | Whatever native subagent or task feature the host exposes, mapped onto the same roles. |
+| No subagent support | The primary agent works each role itself, in order, keeping the same briefs and review gates. |
+
 ## Deciding: inline or delegated
 
 Default to working directly. Delegate to a fresh subagent (when the host

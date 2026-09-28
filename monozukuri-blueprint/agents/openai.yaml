@@ -1,0 +1,8 @@
+interface:
+  display_name: "Monozukuri Blueprint — Greenfield Gates"
+  short_description: "Four approval-gated stages before building from scratch"
+  brand_color: "#1F2937"
+  default_prompt: "Use $monozukuri-blueprint to take this greenfield idea through business logic, tech stack, logic-to-stack map, and phase plan, gated on my approval."
+
+policy:
+  allow_implicit_invocation: false

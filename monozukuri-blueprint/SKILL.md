@@ -1,6 +1,7 @@
 ---
 name: monozukuri-blueprint
-description: "Author a greenfield build blueprint in four gated stages — business logic, tech stack, logic-to-stack mapping, and a phase plan — each requiring explicit user approval before the next. Use when building a new project or a substantial new subsystem from scratch."
+description: "Author a greenfield build blueprint in four gated stages — business logic, tech stack, logic-to-stack mapping, and a phase plan — each requiring explicit user approval before the next. Use when building a new project or a substantial new subsystem from scratch; run by monozukuri-core for greenfield tasks."
+user-invocable: false
 ---
 
 # Monozukuri blueprint
